@@ -1,0 +1,21 @@
+@use '../util/' as *;
+
+header {
+    max-width: rem(640);
+    margin: auto;
+    @include breakpoint-down('small'){
+        max-width: rem(320);
+    }
+
+    img {
+        margin-top: rem(87);
+        margin-bottom: rem(45);
+
+        @include breakpoint-down('small'){
+            margin-top: rem(85);
+            margin-bottom: rem(35);
+            height: rem(16);
+
+        }
+    }
+}

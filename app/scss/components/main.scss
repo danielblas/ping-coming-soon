@@ -1,0 +1,147 @@
+@use '../util/' as *;
+
+main {
+
+    max-width: rem(640);
+    margin: auto;
+    @include breakpoint-down('small'){
+        max-width: rem(320);
+    }
+
+    .text {
+        margin-bottom: rem(40);
+        
+        @include breakpoint-down('small'){
+            margin-bottom: rem(32);
+        }
+
+        &--title {
+            color: $gray;
+            font-weight: 300;
+            font-size: rem(48);
+            margin-bottom: rem(25);
+
+            @include breakpoint-down('small'){
+                font-size: rem(22);
+                margin-bottom: rem(18);
+            }
+
+            span {
+                color: $very-dark-blue;
+                font-weight: 700;
+            }
+        }
+
+        &--para {
+            color: $very-dark-blue;
+            font-weight: 300;
+
+            @include breakpoint-down('small'){
+                font-size: rem(12);
+            }
+        }
+    }
+
+
+    .input {
+        margin-bottom: rem(90);
+        
+        
+
+        @include breakpoint-down('small'){
+            margin-bottom: rem(72);
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            gap: rem(15);
+            flex-wrap: wrap;
+        }
+
+        &--text {
+            /* font-family: 'Libre Franklin', sans-serif;
+            font-size: rem(16);
+            font-weight: 300;
+            padding: rem(18) rem(30);
+            outline: none;
+            border: rem(1), solid, $pale-blue;
+            border-radius: rem(30);
+            width: 100%; */
+            flex: 65%;
+
+            &--input {
+                font-family: 'Libre Franklin', sans-serif;
+                font-size: rem(16);
+                font-weight: 300;
+                padding: rem(18) rem(30);
+                outline: none;
+                border: rem(1), solid, $pale-blue;
+                border-radius: rem(30);
+                width: 100%;
+
+            }
+
+            &--input::placeholder{
+                font-family: 'Libre Franklin', sans-serif;
+                color: $pale-blue;
+            }
+
+            &--error {
+                display: none;
+                font-size: rem(12);
+                text-align: left;
+                padding: rem(10) 0 0 rem(30) ;
+                font-style: italic;
+                color: $light-red;
+
+                @include breakpoint-down('small'){
+                    text-align: center;
+                }
+            }
+
+            .error {
+                border-color: $light-red;
+            }
+            
+        }
+
+        
+
+        &--button {
+            font-family: 'Libre Franklin', sans-serif;
+            color: white;
+            background-color: $blue;
+            font-size: rem(16);
+            font-weight: 600;
+            padding: rem(18) rem(30);
+            outline: none;
+            border: rem(1), solid, $pale-blue;
+            border-radius: rem(30);
+            width: 100%;
+            max-height: rem(57);
+            flex: 27%;
+
+            &:hover {
+                filter: opacity(75%);
+                cursor: pointer;
+            }
+
+        }
+    }
+
+
+
+    .image {
+        img{
+            height: rem(385);
+            width: rem(640);
+
+            @include breakpoint-down('small'){
+                height: rem(192.5);
+                width: rem(320);
+            }
+        }
+    }
+
+}

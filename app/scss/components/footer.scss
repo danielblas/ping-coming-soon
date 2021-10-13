@@ -1,0 +1,41 @@
+@use '../util/' as *;
+
+footer{
+    position: absolute;
+    max-width: rem(640);
+    margin: auto;
+    bottom: rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: $gray;
+    font-size: rem(12);
+    font-weight: 300;
+
+    @include breakpoint-down('small'){
+        max-width: rem(320);
+        bottom: rem(35);
+
+        font-size: rem(10);
+    }
+
+    .logos {
+        margin-bottom: rem(22);
+        .logo {
+            margin: 0 rem(6);
+            display: inline;
+            ion-icon{
+                font-size: rem(14);
+                padding: rem(7);
+                color: $blue;
+                border: rem(1), solid, $pale-blue;
+                border-radius: 50%;
+            }
+            ion-icon:hover{
+                color: white;
+                background-color: $blue;
+                cursor: pointer;
+            }
+        }
+    }
+}

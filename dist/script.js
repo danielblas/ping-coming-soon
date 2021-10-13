@@ -1,2 +1,2 @@
-"use strict";
+"use strict";var input=document.getElementsByClassName("input--text--input")[0],button=document.getElementsByClassName("input--button")[0];function emailValidation(t){t=input.value;/^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i.test(t)?input.classList.contains("error")&&(input.classList.remove("error"),input.nextElementSibling.style.display="none"):input.classList.contains("error")||(input.classList.add("error"),input.nextElementSibling.style.display="block")}button.addEventListener("click",emailValidation);
 //# sourceMappingURL=script.js.map
